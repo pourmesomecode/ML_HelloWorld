@@ -17,19 +17,20 @@ from sklearn.svm import SVC
 
 #Load Data
 #url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
-url = "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+#url = "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+url = "http://archive.ics.uci.edu/ml/machine-learning-databases/anonymous/anonymous-msweb.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url, names=names)
 
 
-dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
-plt.show()
+#dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+#plt.show()
 
 #dataset.hist()
 #plt.show()
 
-#scatter_matrix(dataset)
-#plt.show()
+scatter_matrix(dataset)
+plt.show()
 
 # array = dataset.values
 # X = array[:,0:4]
@@ -62,11 +63,11 @@ plt.show()
 
 
 # Make predictions on validation dataset
-#nn = KNeighborsClassifier()
-#knn.fit(X_train, Y_train)
-#predictions = knn.predict(X_validation)
-#print(accuracy_score(Y_validation, predictions))
-#print(confusion_matrix(Y_validation, predictions))
-#print(classification_report(Y_validation, predictions))
+# nn = KNeighborsClassifier()
+# knn.fit(X_train, Y_train)
+# predictions = knn.predict(X_validation)
+# print(accuracy_score(Y_validation, predictions))
+# print(confusion_matrix(Y_validation, predictions))
+# print(classification_report(Y_validation, predictions))
 
 #help(KNeighborsClassifier)
